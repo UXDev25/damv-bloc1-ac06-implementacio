@@ -1,11 +1,11 @@
 ﻿using System;
-namespace helloWorld
+namespace HelloWorld
 {
-    public class hello
+    public class HelloWorld
     {
         public static void Main()
-        { 
-            const string Msg = "¡Hola mundo!"
+        {
+            const string Msg = "¡Hola mundo!";
             Console.WriteLine(Msg);
         }
     }
