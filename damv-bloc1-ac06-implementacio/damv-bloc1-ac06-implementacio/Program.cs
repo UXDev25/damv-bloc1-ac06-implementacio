@@ -6,14 +6,14 @@ public class Program
 {
     public static void Main() 
     { 
-        const string MSG_INPUT = "Enter temperature in celsius:";
-        const string MSG_RESULT = "Temperature in kelvin: ";
+        const string Msg_Input = "Enter temperature in celsius:";
+        const string Msg_Result = "Temperature in kelvin: ";
         float celsius, kelvin;
 
-        Console.WriteLine(MSG_INPUT);
+        Console.WriteLine(Msg_Input);
         celsius = Convert.ToInt32(Console.ReadLine());
         kelvin = celsius + 273.15f;
-        Console.WriteLine(MSG_RESULT + kelvin);
+        Console.WriteLine(Msg_Result + kelvin);
     }
 }
 // POSTCONDITION: 'kelvin' contains the converted temperature, and it is displayed.
