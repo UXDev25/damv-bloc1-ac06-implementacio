@@ -1,22 +1,26 @@
 ﻿using System;
 using System.Runtime.CompilerServices;
 
-// PRECONDITION: The user is prompted to input a temperature in Celsius.
+// PRECONDITION: The user is prompted to input the width and height of a rectangle.
+
 public class Program
 {
     public static void Main() 
     { 
-        const string MSG_INPUT = "Enter temperature in celsius:";
-        const string MSG_RESULT = "Temperature in kelvin: ";
-        float celsius, kelvin;
+        const string Msg_Input_Widh = "Enter the width of the rectangle:";
+        const string Msg_Input_Height = "Enter the height of the rectangle:";
+        const string Msg_Result = "The area of the rectangle is: ";
+        float width, height, area;
 
-        Console.WriteLine(MSG_INPUT);
-        celsius = Convert.ToInt32(Console.ReadLine());
-        kelvin = celsius + 273.15f;
-        Console.WriteLine(MSG_RESULT + kelvin);
+        Console.WriteLine(Msg_Input_Width);
+        width = Convert.ToInt32(Console.ReadLine());
+        Console.WriteLine(Msg_Input_Height);
+        height = Convert.ToInt32(Console.ReadLine());
+        area = width * height;
+        Console.WriteLine(Msg_Result + area);
     }
 }
-// POSTCONDITION: 'kelvin' contains the converted temperature, and it is displayed.
+// POSTCONDITION: 'area' contains the product of 'width' and 'height', and it is displayed.
 
 
 
