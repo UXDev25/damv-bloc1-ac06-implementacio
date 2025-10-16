@@ -1,13 +1,12 @@
 ﻿using System;
-namespace HelloWorld
+
+public class Program
 {
-    public class HelloWorld
+    public static void Main()
     {
-        public static void Main()
-        {
-            const string Msg = "¡Hola mundo!";
-            Console.WriteLine(Msg);
-        }
+         const string Msg = "¡Hola mundo!";
+         Console.WriteLine(Msg);
     }
 }
+
 
