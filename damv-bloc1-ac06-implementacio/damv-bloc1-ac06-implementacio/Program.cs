@@ -1,26 +1,25 @@
 ﻿using System;
 using System.Runtime.CompilerServices;
 
-// PRECONDITION: The user is prompted to input the width and height of a rectangle.
+// PRECONDITION: The user is prompted to input an amount in euros.
 
 public class Program
 {
     public static void Main() 
-    { 
-        const string Msg_Input_Widh = "Enter the width of the rectangle:";
-        const string Msg_Input_Height = "Enter the height of the rectangle:";
-        const string Msg_Result = "The area of the rectangle is: ";
-        float width, height, area;
+    {
+        float Exchange_Rate = 1.12f;
+        const string Msg_Input = "Enter the amount in euros: ";
+        const string Msg_Result = "Amount in dollars: ";
+        float euros, dollars;
 
-        Console.WriteLine(Msg_Input_Width);
-        width = Convert.ToInt32(Console.ReadLine());
-        Console.WriteLine(Msg_Input_Height);
-        height = Convert.ToInt32(Console.ReadLine());
-        area = width * height;
-        Console.WriteLine(Msg_Result + area);
+        Console.WriteLine(Msg_Input);
+        euros = Convert.ToInt32(Console.ReadLine());
+        dollars = euros * Exchange_Rate;
+        Console.WriteLine(Msg_Result + dollars);
     }
 }
-// POSTCONDITION: 'area' contains the product of 'width' and 'height', and it is displayed.
+// POSTCONDITION: 'dollars' contains the converted amount, and it is displayed.
+
 
 
 
