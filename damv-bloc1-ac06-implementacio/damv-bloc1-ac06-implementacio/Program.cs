@@ -1,24 +1,29 @@
 ﻿using System;
 using System.Runtime.CompilerServices;
 
-// PRECONDITION: The user is prompted to input an amount in euros.
+// PRECONDITION: The user is prompted to input three real numbers.
 
 public class Program
 {
     public static void Main() 
     {
-        float Exchange_Rate = 1.12f;
-        const string Msg_Input = "Enter the amount in euros: ";
-        const string Msg_Result = "Amount in dollars: ";
-        float euros, dollars;
+        const string Msg_Input1 = "Enter the first number:";
+        const string Msg_Input2 = "Enter the second number:";
+        const string Msg_Input3 = "Enter the third number:";
+        const string Msg_Result = "The average is: ";
+        float num1, num2, num3, average;
 
-        Console.WriteLine(Msg_Input);
-        euros = Convert.ToInt32(Console.ReadLine());
-        dollars = euros * Exchange_Rate;
-        Console.WriteLine(Msg_Result + dollars);
+        Console.WriteLine(Msg_Input1);
+        num1 = Convert.ToInt32(Console.ReadLine());
+        Console.WriteLine(Msg_Input1);
+        num2 = Convert.ToInt32(Console.ReadLine());
+        Console.WriteLine(Msg_Input1);
+        num3 = Convert.ToInt32(Console.ReadLine());
+        average = (num1 + num2 + num3) / 3;
+        Console.WriteLine(Msg_Result + average);
     }
 }
-// POSTCONDITION: 'dollars' contains the converted amount, and it is displayed.
+// POSTCONDITION: 'average' contains the arithmetic mean of the three numbers, and it is displayed.
 
 
 
