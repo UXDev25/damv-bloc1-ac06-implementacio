@@ -1,29 +1,44 @@
 ﻿using System;
 using System.Runtime.CompilerServices;
+using System.Security.Cryptography;
 
-// PRECONDITION: The user is prompted to input three real numbers.
-
+// PRECONDITION: The algorithm is ready to accept any integer input value.
+using System;
 public class Program
 {
     public static void Main() 
     {
-        const string Msg_Input1 = "Enter the first number:";
-        const string Msg_Input2 = "Enter the second number:";
-        const string Msg_Input3 = "Enter the third number:";
-        const string Msg_Result = "The average is: ";
-        float num1, num2, num3, average;
+        const string msgInput = "Enter a value to check if it's a natural number: ";
+        const string msgOk = " is a natural number.";
+        const string msgKo = " is NOT a natural number.";
 
-        Console.WriteLine(Msg_Input1);
-        num1 = Convert.ToInt32(Console.ReadLine());
-        Console.WriteLine(Msg_Input1);
-        num2 = Convert.ToInt32(Console.ReadLine());
-        Console.WriteLine(Msg_Input1);
-        num3 = Convert.ToInt32(Console.ReadLine());
-        average = (num1 + num2 + num3) / 3;
-        Console.WriteLine(Msg_Result + average);
+        int value;
+        bool isNatural;
+
+        Console.WriteLine(msgInput);
+        value = Convert.ToInt32(Console.ReadLine());
+
+        if (value <= 0 && value == value) 
+        {
+            isNatural = false;
+        }
+        else
+        {
+            isNatural = true;
+        }
+
+        if (isNatural)
+        {
+            Console.WriteLine(msgOk);
+        }
+        else 
+        {
+            Console.WriteLine(msgKo);
+        }
     }
 }
-// POSTCONDITION: 'average' contains the arithmetic mean of the three numbers, and it is displayed.
+/* POSTCONDITION: The algorithm has read a 'value' and output a message indicating whether 'value' is a 
+ natural number.*/
 
 
 
