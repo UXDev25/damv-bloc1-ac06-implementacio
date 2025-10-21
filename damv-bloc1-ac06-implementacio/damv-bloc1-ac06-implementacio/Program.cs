@@ -8,37 +8,26 @@ public class Program
 {
     public static void Main() 
     {
-        const string msgInput = "Enter a value to check if it's a natural number: ";
-        const string msgOk = " is a natural number.";
-        const string msgKo = " is NOT a natural number.";
+        const string msgInput = "Enter a value to check if it's within the interval (5, 50):";
+        const string msgOk = " is within the interval (5, 50).";
+        const string msgKo = " is NOT within the interval (5, 50).";
 
-        int value;
-        bool isNatural;
+        int number;
 
         Console.WriteLine(msgInput);
-        value = Convert.ToInt32(Console.ReadLine());
+        number = Convert.ToInt32(Console.ReadLine());
 
-        if (value <= 0 && value == value) 
+        if (number > 5 && number < 50) 
         {
-            isNatural = false;
+            Console.WriteLine(msgOk); ;
         }
         else
-        {
-            isNatural = true;
-        }
-
-        if (isNatural)
-        {
-            Console.WriteLine(msgOk);
-        }
-        else 
         {
             Console.WriteLine(msgKo);
         }
     }
 }
-/* POSTCONDITION: The algorithm has read a 'value' and output a message indicating whether 'value' is a 
- natural number.*/
+// POSTCONDITION: The algorithm has read a 'number' and output a message indicating whether 'number' is strictly between 5 and 50.
 
 
 
